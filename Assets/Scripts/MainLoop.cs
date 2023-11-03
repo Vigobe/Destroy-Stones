@@ -22,7 +22,7 @@ public class MainLoop: MonoBehaviour {
 	{
         GameManager.currentNumberStoneThrow = 0;
 		GameManager.currentNumberDestroyedStones = 0;
-		GameManager.currentTime = 120.0f;
+		GameManager.currentTime = 90.0f;
 
         StartCoroutine(ThrowStones());
 	}

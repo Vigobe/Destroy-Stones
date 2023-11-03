@@ -25,7 +25,7 @@ public class InerfaceStone : MonoBehaviour
         textThrown.text = "Nro. Stones : " + GameManager.currentNumberStoneThrow;
         textDestroyed.text = "Destroy : " +  GameManager.currentNumberDestroyedStones ;
         textTime.text = "Time left : " + GameManager.currentTime.ToString("N0");
-        textBest.text = "Best Score: " + GameManager.currentBestScore;
+        textBest.text = "Best Score: " + GameManager.bestName + " = " + GameManager.currentBestScore;
 
     }
 

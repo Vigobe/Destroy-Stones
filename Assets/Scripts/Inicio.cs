@@ -4,13 +4,18 @@ using TMPro;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Inicio : MonoBehaviour
 {
     public TMP_Text textBestScore;
+    public TMP_InputField inputName;
+    public TMP_Text textName;
+
+   
     public void Update()
     {
-        textBestScore.text = "Best Score: " + GameManager.currentBestScore;
+        textBestScore.text = "Best Score: " + GameManager.bestName + " = " + GameManager.currentBestScore;
     }
     public void Click()
     {
@@ -24,5 +29,12 @@ public class Inicio : MonoBehaviour
 #else
         Application.Quit(); // original code to quit Unity player
 #endif
+    }
+
+    public void GetName()
+    {
+        textName.text = inputName.text;
+        GameManager.namePlayer  = textName.text;
+        Debug.Log(textName.text);
     }
 }

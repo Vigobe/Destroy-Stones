@@ -25,6 +25,9 @@ public class StoneDie : MonoBehaviour
         Destroy(gameObject );
         GameManager.currentNumberDestroyedStones++;
         if (GameManager.currentNumberDestroyedStones > GameManager.currentBestScore)
+        {
             GameManager.currentBestScore = GameManager.currentNumberDestroyedStones;
+            GameManager.bestName = GameManager.namePlayer;
+        }
     }
 }
