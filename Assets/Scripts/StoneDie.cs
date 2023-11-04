@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.IO;
 
 public class StoneDie : MonoBehaviour
 {
@@ -28,6 +29,8 @@ public class StoneDie : MonoBehaviour
         {
             GameManager.currentBestScore = GameManager.currentNumberDestroyedStones;
             GameManager.bestName = GameManager.namePlayer;
+            Debug.Log("Llamando a Save DATA");
+            ControllerDataGAme.SaveData();
         }
     }
 }

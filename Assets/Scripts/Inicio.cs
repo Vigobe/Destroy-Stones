@@ -12,9 +12,10 @@ public class Inicio : MonoBehaviour
     public TMP_InputField inputName;
     public TMP_Text textName;
 
-   
-    public void Update()
+    
+public void Update()
     {
+        ControllerDataGAme.LoadData();
         textBestScore.text = "Best Score: " + GameManager.bestName + " = " + GameManager.currentBestScore;
     }
     public void Click()
